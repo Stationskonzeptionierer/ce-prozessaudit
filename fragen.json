@@ -1,0 +1,154 @@
+{
+  "groups": [
+    {
+      "name": "Tagessteuerung",
+      "items": [
+        {
+          "id": "1.1",
+          "question": "Sind Stationskonzept und Tagesstrukturplan bekannt und für das Team verfügbar?",
+          "criteriaKey": "source"
+        },
+        {
+          "id": "1.2",
+          "question": "Sind die ärztlichen und pflegerischen Zuständigkeiten für den Tag geklärt?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "1.3",
+          "question": "Werden die verbindlichen Tagesstruktur-Zeitfenster eingehalten?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "1.4",
+          "question": "Sind Vertretungen und Prioritäten bei Personalausfällen abgestimmt?",
+          "criteriaKey": "specific"
+        }
+      ]
+    },
+    {
+      "name": "Berufsübergreifende Abstimmung",
+      "items": [
+        {
+          "id": "2.1",
+          "question": "Findet das vorgesehene morgendliche Abstimmungsformat statt?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "2.2",
+          "question": "Sind die erforderlichen Berufsgruppen im Abstimmungsformat beteiligt?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "2.3",
+          "question": "Werden Patientenlage, Entlassungen und Tagesprioritäten abgestimmt?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "2.4",
+          "question": "Werden offene Aufgaben vor Dienstende oder nach der Visite übergeben?",
+          "criteriaKey": "meeting"
+        }
+      ]
+    },
+    {
+      "name": "Visitenorganisation",
+      "items": [
+        {
+          "id": "3.1",
+          "question": "Beginnt die beobachtete Visite zum vorgesehenen Zeitpunkt?",
+          "criteriaKey": "visite"
+        },
+        {
+          "id": "3.2",
+          "question": "Nehmen die vorgesehenen Berufsgruppen an der Visite bzw. Übergabe teil?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.3",
+          "question": "Sind Befunde, Pflegeinformationen und offene Fragen vor der Visite vorbereitet?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.4",
+          "question": "Verläuft die Visite strukturiert und zielgerichtet?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.5",
+          "question": "Werden vermeidbare Unterbrechungen der Visite vermieden?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.6",
+          "question": "Werden Visitenentscheidungen und Anordnungen dokumentiert?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.7",
+          "question": "Werden ärztliche Anordnungen im vereinbarten Zeitfenster ausgearbeitet?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "3.8",
+          "question": "Findet die vereinbarte oberärztliche Supervision statt?",
+          "criteriaKey": "specific"
+        }
+      ]
+    },
+    {
+      "name": "Aufnahme & Entlassung",
+      "items": [
+        {
+          "id": "4.1",
+          "question": "Sind geplante Aufnahmen, Entlassungen bzw. Verlegungen bekannt?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "4.2",
+          "question": "Wird die lokale Entlassungs- bzw. Verlegungsregel eingehalten?",
+          "criteriaKey": "discharge"
+        },
+        {
+          "id": "4.3",
+          "question": "Sind Zuständigkeiten für Aufnahme und Entlassung geklärt?",
+          "criteriaKey": "discharge"
+        }
+      ]
+    },
+    {
+      "name": "Übergaben & Organisation",
+      "items": [
+        {
+          "id": "5.1",
+          "question": "Erfolgen pflegerische und ärztliche Übergaben in der vereinbarten Form?",
+          "criteriaKey": "meeting"
+        },
+        {
+          "id": "5.2",
+          "question": "Ist die Erreichbarkeit während Visiten und Besprechungen sichergestellt?",
+          "criteriaKey": "specific"
+        },
+        {
+          "id": "5.3",
+          "question": "Werden unerledigte Aufgaben nachvollziehbar weitergegeben?",
+          "criteriaKey": "meeting"
+        }
+      ]
+    },
+    {
+      "name": "Verbindlichkeit",
+      "items": [
+        {
+          "id": "6.1",
+          "question": "Überprüfen Stations- und ärztliche Führung die Einhaltung der Regelungen?",
+          "criteriaKey": "source"
+        },
+        {
+          "id": "6.2",
+          "question": "Werden wiederkehrende Abweichungen aufgenommen und Maßnahmen vereinbart?",
+          "criteriaKey": "source"
+        }
+      ]
+    }
+  ]
+}
