@@ -1,0 +1,66 @@
+CE PROZESSAUDIT - VERSION 0.3 | LOKALE OFFLINE-PWA
+=================================================
+
+ZIEL
+App auf einem iPhone einmal aus einem lokalen HTTPS-Webserver installieren.
+Danach kann die App OHNE laufenden Windows-PC und ohne Netzwerk verwendet werden,
+sofern der Offline-Cache erfolgreich installiert wurde und iOS ihn beibehaelt.
+
+VORAUSSETZUNGEN
+- Windows 10 oder 11 mit Windows PowerShell 5.1.
+- Windows-PC und iPhone im gleichen privaten WLAN, ohne Client-Isolation.
+- iPhone mit Safari und Berechtigung, ein selbst erstelltes Testzertifikat zu installieren.
+- Auf dienstlich verwalteten iPhones vorher Zustimmung der IT einholen.
+- Keine Patientendaten in die App eingeben.
+
+SCHRITT 1: AUF WINDOWS
+1. ZIP vollstaendig in einen eigenen Ordner entpacken.
+2. Doppelklick auf Start_PWA_Installation.bat.
+3. Falls Windows Defender Firewall fragt, nur "Private Netzwerke" erlauben.
+4. Das Fenster zeigt eine Adresse wie http://192.168.1.20:8765/ an.
+   Diese Adresse abschreiben, NICHT die Adresse mit localhost verwenden.
+5. Das Fenster bis zum Abschluss des Tests offen lassen.
+
+SCHRITT 2: EINMALIGES TESTZERTIFIKAT AUF iPHONE
+1. Im iPhone-Safari die angezeigte HTTP-Adresse aufrufen.
+2. "Zertifikat herunterladen" auswaehlen und Download zulassen.
+3. iPhone: Einstellungen > Profil geladen bzw. Allgemein > VPN & Geraeteverwaltung.
+   Das Profil "CE Audit Lokale Test CA" installieren (Code/Passwort bei Bedarf).
+4. Einstellungen > Allgemein > Info > Zertifikatsvertrauenseinstellungen.
+   Vollstaendiges Vertrauen fuer das lokal installierte Testzertifikat aktivieren.
+   Nur fuer dieses private Testvorhaben; NICHT im Kliniknetz ohne IT-Freigabe.
+5. Zur Einrichtungsseite in Safari zurueckkehren und HTTPS-Link anklicken,
+   z. B. https://192.168.1.20:8766/.
+   Bei Zertifikatsfehler NICHT einfach eine Warnung ignorieren: IP und
+   Zertifikat/Vertrauen pruefen. Falls PC-IP wechselt: Script neu starten,
+   ggf. altes Zertifikat auf dem iPhone entfernen und neues installieren.
+
+SCHRITT 3: OFFLINE-VORBEREITUNG
+1. In Safari die CE Audit App aufrufen und auf "Offline bereit" warten.
+2. Falls noetig "Offline-Status erneut pruefen" antippen.
+3. Safari Teilen > Zum Home-Bildschirm > Als Web-App oeffnen aktivieren > Hinzufuegen.
+4. Die App einmal ueber das Home-Bildschirm-Symbol starten, solange der PC noch laeuft.
+5. WLAN auf dem iPhone kurz deaktivieren (Flugmodus) und die App komplett
+   schliessen und erneut ueber das Symbol starten: Station und 24 Fragen pruefen.
+6. Erst nach erfolgreichem Offline-Test den Windows-Server beenden.
+
+DATENSICHERUNG UND SICHERHEIT
+- Audit-Ergebnisse im Browser (localStorage) sind NICHT dauerhaft garantiert.
+- Regelmaessig JSON exportieren; CSV dient der Weiterverarbeitung in Excel.
+- Exportierte Daten bleiben in Dateien; daher sichere Ablage beachten.
+- Das lokal erzeugte CA-Zertifikat macht das iPhone zur Vertrauensstellung
+  gegenueber diesem Testzertifikat bereit. Nach Ende der Tests entfernen:
+  Einstellungen > Allgemein > VPN & Geraeteverwaltung und
+  Zertifikatsvertrauenseinstellungen; auf Windows optional selbst erstellte
+  Zertifikate im eigenen Zertifikatspeicher entfernen lassen.
+- Private Schluessel werden nur auf dem Windows-PC erzeugt, NICHT im ZIP.
+- Lokale PWA-Dateien sind fuer andere Geraete im gleichen WLAN erreichbar.
+- Die Anwendung enthaelt interne Stationsvorgaben. Nur geschuetztes Testnetz nutzen.
+
+TECHNISCHE GRENZEN
+- Ohne vertrauenswuerdiges HTTPS funktioniert ein Service Worker nicht.
+- Auf einem verwalteten iPhone kann eine IT-Richtlinie Zertifikatsinstallation verhindern.
+- iOS kann Website-Daten unter bestimmten Umstaenden entfernen.
+- Die App muss vor dem Offline-Test einmal vollstaendig geladen werden.
+- Windows-PowerShell-Zertifikatbefehle und iOS-Zertifikatinstallation wurden
+  hier nicht auf Deinem konkreten Geraet getestet.
