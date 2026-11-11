@@ -1,6 +1,6 @@
-// CE Prozessaudit v0.6: versioned, same-origin offline shell.
-const CACHE = 'ce-audit-public-v06';
-const CORE = ['./','./index.html','./app.js?v=06','./style.css?v=06','./fragen.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+// CE Prozessaudit v0.7: versioned, same-origin offline shell.
+const CACHE = 'ce-audit-public-v07';
+const CORE = ['./','./index.html','./app.js?v=07','./style.css?v=07','./fragen.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 const SHELL = new Set(CORE.map(p => new URL(p,self.registration.scope).pathname));
 self.addEventListener('install', event => event.waitUntil((async () => {
   const cache = await caches.open(CACHE);
