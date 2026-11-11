@@ -1,6 +1,8 @@
-CE Prozessaudit v0.7: GitHub Pages, oeffentliches Paket.
-Alle Dateien DIREKT ins Repository-Hauptverzeichnis laden.
-Die vertraulichen Stationsdaten NIEMALS auf GitHub laden.
-Auf dem iPhone die separate .json-Datei (nicht die ZIP-Datei) aus dem vertraulichen Paket importieren.
-Version 0.7 nutzt sichtbare native Datei-Auswahlfelder statt versteckter, per JavaScript geklickter Datei-Inputs.
-Vor Updates und bei Nutzung regelmaessig Archiv als JSON sichern.
+CE Prozessaudit v0.8 - GitHub Pages (nur oeffentliche App)
+
+Alle Dateien DIREKT ins Hauptverzeichnis des GitHub-Repositories laden, bisherige Dateien ersetzen.
+index.html enthaelt nun Layout, Auditfragen und JavaScript in EINER DATEI.
+Vertrauliche Stationsdaten duerfen NICHT auf GitHub hochgeladen werden.
+Die Stationsdaten als entpackte .json Datei auf dem iPhone lokal importieren.
+Vor dem Update das Auditarchiv als JSON sichern. Installierte App nicht loeschen.
+Bei anhaltenden Problemen die GitHub Pages Seite in Safari online aktualisieren und danach die installierte App neu starten.
