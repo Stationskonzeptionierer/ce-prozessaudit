@@ -1,0 +1,1 @@
+CE Prozessaudit v0.9 - Fehlerbehebung Import und Startanzeige. Nur oeffentliche App-Dateien auf GitHub hochladen. Vertrauliche Stationsdaten bleiben lokal. Vor Update Audits exportieren. Update ueber Safari im Online-Modus laden, installierte App NICHT loeschen.

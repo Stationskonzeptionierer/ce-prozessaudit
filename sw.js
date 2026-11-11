@@ -1,5 +1,5 @@
-// CE Prozessaudit v0.8: fully self-contained app shell, cache controlled by version.
-const CACHE='ce-audit-public-v08';
+// CE Prozessaudit v0.9: fully self-contained app shell, cache controlled by version.
+const CACHE='ce-audit-public-v09';
 const CORE=['./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install', event=>event.waitUntil((async()=>{
  const c=await caches.open(CACHE);
